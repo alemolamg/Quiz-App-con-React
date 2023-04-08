@@ -13,8 +13,40 @@ const [
 ] = imgs;
 
 export const CategoryList = () => {
+
+	// render() {
+	// 	const data = [{name: "John Doe", "age": 44}, {name:"Jane Doe", "age": 45}]
+	// 	console.log('App started');
+	// 	return <div>
+	// 	{data.map(person => <p key={person.name}>{`${person.name}, ${person.age} years old`}</p>)}
+	// 	</div>
+	//   }
+
+	// const productos = [
+	// 	{ id: 1, nombre: 'Producto 1', precio: 10 },
+	// 	{ id: 2, nombre: 'Producto 2', precio: 20 },
+	// 	{ id: 3, nombre: 'Producto 3', precio: 30 }
+	//   ];
+	
+	  const categoriasHtml = [];
+	
+	  for (let i = 0; i < categories.length; i++) {
+		const producto = productos[i];
+		categoriasHtml.push(
+			<CategoryCard
+			category={categories[i]}
+			src={imgCiencia}
+			alt={`Categoría ${categories[i]}`}
+			gradientColor=' from-purple-500 to-pink-500'
+		/>
+		);
+	  }
+
 	return (
 		<div className='flex flex-row flex-wrap justify-center gap-4 mt-10'>
+			
+			{categoriasHtml}
+
 			{/* Category Link Ciencia */}
 			<CategoryCard
 				category={categories.ciencia}
@@ -63,6 +95,14 @@ export const CategoryList = () => {
 				src={imgTecnologia}
 				alt={`Categoría ${categories.tecnologia}`}
 				gradientColor='from-violet-900 to-rose-500 '
+			/>
+
+			{/* Category Lagos Plitvice */}
+			<CategoryCard
+				category={categories.lagosPlitvice}
+				src={imgTecnologia}
+				alt={`Categoría ${categories.lagosPlitvice}`}
+				gradientColor='from-violet-900 to-blue-400 '
 			/>
 		</div>
 	);

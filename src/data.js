@@ -14,6 +14,7 @@ export const imgs = [
 	Historia,
 	Literatura,
 	Tecnologia,
+	// lagosPlitvice,
 ];
 
 export const categories = {
@@ -24,6 +25,7 @@ export const categories = {
 	filosofia: 'Filosofía',
 	tecnologia: 'Tecnología',
 	geografia: 'Geografía',
+	lagosPlitvice: "Lagos de Plitvice",
 };
 
 const {
